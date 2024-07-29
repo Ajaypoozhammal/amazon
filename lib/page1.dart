@@ -96,7 +96,7 @@ class _Screen1State extends State<Screen1> {
                     ),
                   ),
                   SizedBox(
-                    width: 230.w,
+                    width: 210.w,
                   ),
                   Text(
                     'See all',
@@ -150,6 +150,7 @@ class _Screen1State extends State<Screen1> {
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      height: 50,
                       decoration: ShapeDecoration(
                         color: Color(0xFFE5DCFC),
                         shape: (RoundedRectangleBorder(
@@ -167,7 +168,7 @@ class _Screen1State extends State<Screen1> {
                             },
                             child: Container(
                               width: double.infinity,
-                              height: 140.h,
+                              height: 100.h,
                               decoration: ShapeDecoration(
                                 color: Colors.white,
                                 shape: (RoundedRectangleBorder(
@@ -185,12 +186,12 @@ class _Screen1State extends State<Screen1> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(right: 100),
+                            padding: const EdgeInsets.only(right: 60,top: 5),
                             child: Text(
-                              'Sneaker',
+                              'Headphone',
                               style: GoogleFonts.roboto(
                                 color: Colors.black,
-                                fontSize: 15.sp,
+                                fontSize: 10.sp,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
