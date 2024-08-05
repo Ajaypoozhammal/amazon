@@ -6,7 +6,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Screen2 extends StatefulWidget {
-  const Screen2({super.key});
+  final String productphoto;
+  final String text;
+  final String price;
+
+  const Screen2({
+    super.key,
+    required this.productphoto,
+    required this.text,
+    required this.price,
+  });
 
   @override
   State<Screen2> createState() => _Screen2State();
@@ -23,15 +32,15 @@ class _Screen2State extends State<Screen2> {
       appBar: AppBar(
         leading: Center(
             child: TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Icon(
-                Icons.arrow_circle_left_outlined,
-                color: Colors.black,
-                size: 35,
-              ),
-            )),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: Icon(
+            Icons.arrow_circle_left_outlined,
+            color: Colors.black,
+            size: 35,
+          ),
+        )),
         actions: [
           Stack(
             children: [
@@ -80,9 +89,9 @@ class _Screen2State extends State<Screen2> {
               itemCount: 15,
               itemBuilder:
                   (BuildContext context, int itemIndex, int pageViewIndex) =>
-                  Container(
-                    child: Image.asset('assets/b.png'),
-                  ),
+                      Container(
+                child: Image.network(widget.productphoto),
+              ),
               options: CarouselOptions(
                 height: 200,
                 aspectRatio: 16 / 9,
@@ -117,7 +126,7 @@ class _Screen2State extends State<Screen2> {
               child: Row(
                 children: [
                   Text(
-                    'Headphone',
+                    widget.text,
                     style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 20.sp,
@@ -165,7 +174,7 @@ class _Screen2State extends State<Screen2> {
               child: Row(
                 children: [
                   Text(
-                    '\$155 /',
+                    widget.price,
                     style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 20.sp,
@@ -434,16 +443,20 @@ class _Screen2State extends State<Screen2> {
                         ),
                       ),
                       child: Center(
-                        child: Text('-   1   +',
+                        child: Text(
+                          '-   1   +',
                           style: TextStyle(
                             color: Color(0xFF8204FF),
                             fontSize: 22.sp,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w400,
-                          ),),
+                          ),
+                        ),
                       ),
                     ),
-                    SizedBox(width: 10.w,),
+                    SizedBox(
+                      width: 10.w,
+                    ),
                     Container(
                       width: 100.w,
                       height: 50.h,
@@ -457,27 +470,33 @@ class _Screen2State extends State<Screen2> {
                         padding: const EdgeInsets.only(left: 5),
                         child: Row(
                           children: [
-                            Icon(Icons.add_shopping_cart_rounded, size: 20,
-                              color: Colors.white,),
-                            Text('By now',
+                            Icon(
+                              Icons.add_shopping_cart_rounded,
+                              size: 20,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              'By now',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18.sp,
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
-                              ),)
+                              ),
+                            )
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(width: 10.w,),
+                    SizedBox(
+                      width: 10.w,
+                    ),
                     CircleAvatar(
                       backgroundColor: Color(0x198204FF),
                       radius: 30,
-                      child: Icon(
-                          Icons.favorite_border,
-                          color: Color(0xFF8204FF),
-                          size: 35 ),)
+                      child: Icon(Icons.favorite_border,
+                          color: Color(0xFF8204FF), size: 35),
+                    )
                   ],
                 ),
               ),
