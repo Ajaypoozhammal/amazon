@@ -12,8 +12,8 @@ class AmazonApi2 {
   ApiClient apiClient = ApiClient();
 
 
-  Future<AmazonModel2> getAmazon() async {
-    String trendingpath = 'https://real-time-amazon-data.p.rapidapi.com/product-details?asin=B0BQ118F2T&country=US';
+  Future<AmazonModel2> getAmazon(String id) async {
+    String trendingpath = 'https://real-time-amazon-data.p.rapidapi.com/product-details?asin=$id&country=US';
     var body = {
 
     };

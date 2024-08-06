@@ -169,11 +169,11 @@ class ProductVariations {
     if (json['color'] != null) {
       color = [];
       json['color'].forEach((v) {
-        color?.add(Color.fromJson(v));
+        color?.add(Color1.fromJson(v));
       });
     }
   }
-  List<Color>? color;
+  List<Color1>? color;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -185,14 +185,14 @@ class ProductVariations {
 
 }
 
-class Color {
-  Color({
+class Color1 {
+  Color1({
       this.asin, 
       this.value, 
       this.photo, 
       this.isAvailable,});
 
-  Color.fromJson(dynamic json) {
+  Color1.fromJson(dynamic json) {
     asin = json['asin'];
     value = json['value'];
     photo = json['photo'];

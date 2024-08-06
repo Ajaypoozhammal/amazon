@@ -12,11 +12,11 @@ class Amazon2Bloc extends Bloc<Amazon2Event, Amazon2State> {
   late AmazonModel2 amazonModel2;
   AmazonApi2 amazonApi2=AmazonApi2();
   Amazon2Bloc() : super(Amazon2Initial()) {
-    on<Amazon2Event>((event, emit) async {
+    on<FetchAmazon2>((event, emit) async {
 
       emit(Amazon2BlocLoading());
       try{
-        amazonModel2= await amazonApi2.getAmazon();
+        amazonModel2= await amazonApi2.getAmazon(event.id);
         emit(Amazon2BlocLoaded());
       }
       catch(e){

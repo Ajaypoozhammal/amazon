@@ -198,7 +198,8 @@ class _Screen1State extends State<Screen1> {
                                         .toString(),
                                               text:  data.data!.products![index].productTitle
                                                 .toString(), price: data.data!.products![index].productPrice
-                                                  .toString(),
+                                                  .toString(), id: data
+                                                  .data!.products![index].asin.toString(),
 
                                              )));
                                   },
@@ -222,13 +223,13 @@ class _Screen1State extends State<Screen1> {
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(right: 60, top: 5),
+                                      const EdgeInsets.only(right: 30, top: 5),
                                   child: Text(
                                     data.data!.products![index].productTitle
                                         .toString(),
                                     style: GoogleFonts.roboto(
                                       color: Colors.black,
-                                      fontSize: 10.sp,
+                                      fontSize: 13.sp,
                                       fontWeight: FontWeight.w400,
                                     ),maxLines: 1,
                                   ),
