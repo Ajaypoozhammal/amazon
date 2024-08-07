@@ -1,10 +1,12 @@
 import 'package:amazone/page1.dart';
 import 'package:amazone/page2.dart';
+import 'package:amazone/page3.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Block/amazon2_bloc.dart';
+import 'Block/amazon3_bloc.dart';
 import 'Block/amazon_bloc.dart';
 
 void main() {
@@ -32,6 +34,10 @@ class MyApp extends StatelessWidget {
               ),
                 BlocProvider(
                     create: (context) => Amazon2Bloc()
+
+                ),
+                BlocProvider(
+                    create: (context) => Amazon3Bloc()
 
                 )
               ],

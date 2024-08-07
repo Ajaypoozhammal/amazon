@@ -1,4 +1,5 @@
 import 'package:amazone/Block/amazon2_bloc.dart';
+import 'package:amazone/page3.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -300,13 +301,16 @@ class _Screen2State extends State<Screen2> {
                       SizedBox(
                         width: 10.w,
                       ),
-                      Text(
-                        '132 Reviews',
-                        style: GoogleFonts.roboto(
-                          color: Color(0xFF414141),
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                      TextButton(
+                        onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Screen3(id:widget.id))); },
+                        child: Text(
+                          '132 Reviews',
+                          style: GoogleFonts.roboto(
+                            color: Color(0xFF414141),
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w400,
+                            height: 0,
+                          ),
                         ),
                       ),
                     ],
