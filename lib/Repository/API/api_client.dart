@@ -51,8 +51,8 @@ class ApiClient {
         response = await get(
           Uri.parse(url),
           headers: {
-            'x-rapidapi-host':' real-time-amazon-data.p.rapidapi.com',
-            'x-rapidapi-key':'b2520ccbfamsh7b5be529cc49cedp14158ajsn6b5e85b9e581',
+            'x-rapidapi-host':'real-time-amazon-data.p.rapidapi.com',
+            'x-rapidapi-key':'0c1f80bf9cmsh16bb2ef91e0ae62p1162a9jsnf3641b1bfab0',
 
 
             'Accept': 'application/json',
